@@ -1,0 +1,1562 @@
+Generating include/autoconf.mk
+Generating include/autoconf.mk.dep
+for dir in  cpu/arm_cortexa9 /home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9/ ; do \
+		make -C $dir _depend ; done
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+make[1]: Nothing to be done for '_depend'.
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+make[1]: Nothing to be done for '_depend'.
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+make -C cpu/arm_cortexa9 start.o
+make -C lib_generic/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+make -C lib_generic/lzma/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_generic'
+arm-none-linux-gnueabihf-gcc   -D__ASSEMBLY__ -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a   -o start.o start.S -c
+make -C lib_generic/lzo/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_generic/lzma'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+make -C cpu/arm_cortexa9/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_generic/lzo'
+make -C cpu/arm_cortexa9/s5pc210/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+arm-none-linux-gnueabihf-ar crv liblzma.a 
+make -C lib_arm/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9/s5pc210'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_generic/lzma'
+arm-none-linux-gnueabihf-ar crv liblzo.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cpu.o cpu.c -c
+make -C fs/cramfs/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_arm'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_generic/lzo'
+cpu.c: In function ‘cleanup_before_linux’:
+cpu.c:292:9: warning: implicit declaration of function ‘arm_cache_flush’ [-Wimplicit-function-declaration]
+  292 |         arm_cache_flush();
+      |         ^~~~~~~~~~~~~~~
+make -C fs/fat/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/cramfs'
+cpu.c: In function ‘cpu_mmc_init’:
+cpu.c:439:9: warning: implicit declaration of function ‘setup_hsmmc_clock’ [-Wimplicit-function-declaration]
+  439 |         setup_hsmmc_clock();
+      |         ^~~~~~~~~~~~~~~~~
+cpu.c:440:9: warning: implicit declaration of function ‘setup_hsmmc_cfg_gpio’ [-Wimplicit-function-declaration]
+  440 |         setup_hsmmc_cfg_gpio();
+      |         ^~~~~~~~~~~~~~~~~~~~
+cpu.c:443:15: warning: implicit declaration of function ‘smdk_s5p_mshc_init’ [-Wimplicit-function-declaration]
+  443 |         ret = smdk_s5p_mshc_init();
+      |               ^~~~~~~~~~~~~~~~~~
+cpu.c:446:15: warning: implicit declaration of function ‘smdk_s3c_hsmmc_init’ [-Wimplicit-function-declaration]
+  446 |         ret = smdk_s3c_hsmmc_init();
+      |               ^~~~~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-ar crv libarm_cortexa9.a cpu.o
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/fat'
+a - cpu.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o crc16.o crc16.c -c
+make -C fs/fdos/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/fdos'
+arm-none-linux-gnueabihf-ar crv libcramfs.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o crc32.o crc32.c -c
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/cramfs'
+make -C fs/jffs2/
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o ctype.o ctype.c -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/jffs2'
+arm-none-linux-gnueabihf-ar crv libfdos.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o display_options.o display_options.c -c
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/fdos'
+make -C fs/reiserfs/
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o fat.o fat.c -c
+arm-none-linux-gnueabihf-ar crv libjffs2.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o div64.o div64.c -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/reiserfs'
+In file included from fat.c:36:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/fat.h:195:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  195 | typedef int     (file_detectfs_func)();
+      | ^~~~~~~
+fat.c: In function ‘fat_register_device’:
+fat.c:169:47: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘ulong’ {aka ‘long unsigned int’} [-Wformat=]
+  169 |         printf("Partition%d: Start Address(0x%x), Size(0x%x)\n", part_no, info.start, info.size);
+      |                                              ~^                           ~~~~~~~~~~
+      |                                               |                               |
+      |                                               unsigned int                    ulong {aka long unsigned int}
+      |                                              %lx
+fat.c:169:59: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 4 has type ‘ulong’ {aka ‘long unsigned int’} [-Wformat=]
+  169 |         printf("Partition%d: Start Address(0x%x), Size(0x%x)\n", part_no, info.start, info.size);
+      |                                                          ~^                           ~~~~~~~~~
+      |                                                           |                               |
+      |                                                           unsigned int                    ulong {aka long unsigned int}
+      |                                                          %lx
+fat.c: In function ‘write_pbr’:
+fat.c:195:15: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+  195 |         img = malloc(sizeof(__u8)*512);
+      |               ^~~~~~
+fat.c:37:1: note: ‘malloc’ is defined in header ‘<stdlib.h>’; did you forget to ‘#include <stdlib.h>’?
+   36 | #include <fat.h>
+  +++ |+#include <stdlib.h>
+   37 | #include <asm/byteorder.h>
+fat.c:195:13: warning: assignment to ‘__u8 *’ {aka ‘unsigned char *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  195 |         img = malloc(sizeof(__u8)*512);
+      |             ^
+fat.c:282:31: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+  282 |         printf("Fat size : 0x%x\n", info->size / (spc * 128));
+      |                              ~^     ~~~~~~~~~~~~~~~~~~~~~~~~
+      |                               |                |
+      |                               unsigned int     long unsigned int
+      |                              %lx
+fat.c:191:13: warning: unused variable ‘reserved_cnt’ [-Wunused-variable]
+  191 |         int reserved_cnt= 0;
+      |             ^~~~~~~~~~~~
+fat.c: In function ‘write_reserved’:
+fat.c:324:13: warning: assignment to ‘__u8 *’ {aka ‘unsigned char *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  324 |         img = malloc(sizeof(__u8)*512);
+      |             ^
+fat.c:323:13: warning: unused variable ‘i’ [-Wunused-variable]
+  323 |         int i;
+      |             ^
+fat.c: In function ‘write_fat’:
+fat.c:366:13: warning: assignment to ‘__u8 *’ {aka ‘unsigned char *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  366 |         img = malloc(sizeof(__u8)*512);
+      |             ^
+fat.c:374:15: warning: assignment to ‘__u8 *’ {aka ‘unsigned char *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  374 |         dummy = malloc(sizeof(__u8) * 8192);
+      |               ^
+fat.c:383:13: warning: unused variable ‘temp’ [-Wunused-variable]
+  383 |         int temp = 0;
+      |             ^~~~
+fat.c: In function ‘mklabel’:
+fat.c:430:20: warning: implicit declaration of function ‘__toupper’ [-Wimplicit-function-declaration]
+  430 |         c = *src ? __toupper(*src++) : ' ';
+      |                    ^~~~~~~~~
+fat.c: In function ‘fat_format_device’:
+fat.c:479:47: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘ulong’ {aka ‘long unsigned int’} [-Wformat=]
+  479 |         printf("Partition%d: Start Address(0x%x), Size(0x%x)\n", part_no, info.start, info.size);
+      |                                              ~^                           ~~~~~~~~~~
+      |                                               |                               |
+      |                                               unsigned int                    ulong {aka long unsigned int}
+      |                                              %lx
+fat.c:479:59: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 4 has type ‘ulong’ {aka ‘long unsigned int’} [-Wformat=]
+  479 |         printf("Partition%d: Start Address(0x%x), Size(0x%x)\n", part_no, info.start, info.size);
+      |                                                          ~^                           ~~~~~~~~~
+      |                                                           |                               |
+      |                                                           unsigned int                    ulong {aka long unsigned int}
+      |                                                          %lx
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o board.o board.c -c
+At top level:
+fat.c:425:1: warning: ‘mklabel’ defined but not used [-Wunused-function]
+  425 | mklabel(u_int8_t *dest, const char *src)
+      | ^~~~~~~
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/jffs2'
+make -C fs/ext2/
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o nand.o nand.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o gunzip.o gunzip.c -c
+fat.c: In function ‘read_bootsectandvi’:
+fat.c:1075:25: warning: array subscript 8 is above array bounds of ‘char[8]’ [-Warray-bounds]
+ 1075 |         vistart->fs_type[8] = '\0';
+      |         ~~~~~~~~~~~~~~~~^~~
+In file included from fat.c:36:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/fat.h:150:14: note: while referencing ‘fs_type’
+  150 |         char fs_type[8];        /* Typically FAT12, FAT16, or FAT32 */
+      |              ^~~~~~~
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/ext2'
+board.c: In function ‘off_charge’:
+board.c:148:15: warning: unused variable ‘j’ [-Wunused-variable]
+  148 |         int i,j;
+      |               ^
+board.c:148:13: warning: unused variable ‘i’ [-Wunused-variable]
+  148 |         int i,j;
+      |             ^
+board.c:147:22: warning: unused variable ‘value’ [-Wunused-variable]
+  147 |         volatile int value = 0;
+      |                      ^~~~~
+board.c: In function ‘start_armboot’:
+board.c:356:19: warning: passing argument 1 of ‘memset’ discards ‘volatile’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  356 |         memset (gd->bd, 0, sizeof (bd_t));
+      |                 ~~^~~~
+In file included from /home/chh/source_code/ensy4412/iTop4412_uboot/include/linux/string.h:21,
+                 from /home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:40,
+                 from board.c:41:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/asm/string.h:26:22: note: expected ‘void *’ but argument is of type ‘volatile bd_t *’ {aka ‘volatile struct bd_info *’}
+   26 | extern void * memset(void *, int, __kernel_size_t);
+      |                      ^~~~~~
+board.c:417:39: warning: passing argument 1 of ‘mmc_initialize’ discards ‘volatile’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  417 |         mmc_exist = mmc_initialize (gd->bd);
+      |                                     ~~^~~~
+In file included from board.c:55:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/mmc.h:286:26: note: expected ‘bd_t *’ {aka ‘struct bd_info *’} but argument is of type ‘volatile bd_t *’ {aka ‘volatile struct bd_info *’}
+  286 | int mmc_initialize(bd_t *bis);
+      |                    ~~~~~~^~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o nand_cp.o nand_cp.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o bootm.o bootm.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o ldiv.o ldiv.c -c
+arm-none-linux-gnueabihf-ar crv libreiserfs.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o file.o file.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o net_utils.o net_utils.c -c
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/reiserfs'
+make -C fs/yaffs2/
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o serial.o serial.c -c
+bootm.c: In function ‘do_bootm_linux’:
+bootm.c:61:23: warning: initialization discards ‘volatile’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   61 |         bd_t    *bd = gd->bd;
+      |                       ^~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cache.o cache.c -c
+In file included from file.c:31:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/fat.h:195:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  195 | typedef int     (file_detectfs_func)();
+      | ^~~~~~~
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/yaffs2'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o string.o string.c -c
+In file included from /home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:142,
+                 from serial.c:21:
+serial.c: In function ‘serial_setbrg’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/asm/global_data.h:70:61: warning: unused variable ‘gd’ [-Wunused-variable]
+   70 | #define DECLARE_GLOBAL_DATA_PTR     register volatile gd_t *gd asm ("r8")
+      |                                                             ^~
+serial.c:43:9: note: in expansion of macro ‘DECLARE_GLOBAL_DATA_PTR’
+   43 |         DECLARE_GLOBAL_DATA_PTR;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cache-cp15.o cache-cp15.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o usb_ohci.o usb_ohci.c -c
+arm-none-linux-gnueabihf-ar crv libfat.a fat.o file.o
+a - fat.o
+a - file.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/fat'
+make -C fs/ubifs/
+usb_ohci.c: In function ‘roothub_b’:
+usb_ohci.c:58:21: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   58 | #define readl(a) (*((vu_long *)(a)))
+      |                    ~^~~~~~~~~~~~~~~
+usb_ohci.c:110:18: note: in expansion of macro ‘readl’
+  110 |         { return readl (&hc->regs->roothub.b); }
+      |                  ^~~~~
+usb_ohci.c: In function ‘roothub_status’:
+usb_ohci.c:58:21: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   58 | #define readl(a) (*((vu_long *)(a)))
+      |                    ~^~~~~~~~~~~~~~~
+usb_ohci.c:112:18: note: in expansion of macro ‘readl’
+  112 |         { return readl (&hc->regs->roothub.status); }
+      |                  ^~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o interrupts.o interrupts.c -c
+usb_ohci.c: In function ‘ep_link’:
+usb_ohci.c:59:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   59 | #define writel(a, b) (*((vu_long *)(b)) = ((vu_long)a))
+      |                        ~^~~~~~~~~~~~~~~
+usb_ohci.c:479:25: note: in expansion of macro ‘writel’
+  479 |                         writel (ed, &ohci->regs->ed_controlhead);
+      |                         ^~~~~~
+usb_ohci.c:59:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   59 | #define writel(a, b) (*((vu_long *)(b)) = ((vu_long)a))
+      |                        ~^~~~~~~~~~~~~~~
+usb_ohci.c:487:25: note: in expansion of macro ‘writel’
+  487 |                         writel (ohci->hc_control, &ohci->regs->control);
+      |                         ^~~~~~
+usb_ohci.c:59:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   59 | #define writel(a, b) (*((vu_long *)(b)) = ((vu_long)a))
+      |                        ~^~~~~~~~~~~~~~~
+usb_ohci.c:495:25: note: in expansion of macro ‘writel’
+  495 |                         writel (ed, &ohci->regs->ed_bulkhead);
+      |                         ^~~~~~
+usb_ohci.c:59:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   59 | #define writel(a, b) (*((vu_long *)(b)) = ((vu_long)a))
+      |                        ~^~~~~~~~~~~~~~~
+usb_ohci.c:503:25: note: in expansion of macro ‘writel’
+  503 |                         writel (ohci->hc_control, &ohci->regs->control);
+      |                         ^~~~~~
+usb_ohci.c: In function ‘td_submit_job’:
+usb_ohci.c:59:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   59 | #define writel(a, b) (*((vu_long *)(b)) = ((vu_long)a))
+      |                        ~^~~~~~~~~~~~~~~
+usb_ohci.c:655:25: note: in expansion of macro ‘writel’
+  655 |                         writel (OHCI_BLF, &ohci->regs->cmdstatus); /* start bulk list */
+      |                         ^~~~~~
+usb_ohci.c:59:25: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+   59 | #define writel(a, b) (*((vu_long *)(b)) = ((vu_long)a))
+      |                        ~^~~~~~~~~~~~~~~
+usb_ohci.c:671:25: note: in expansion of macro ‘writel’
+  671 |                         writel (OHCI_CLF, &ohci->regs->cmdstatus); /* start Control list */
+      |                         ^~~~~~
+In file included from usb_ohci.c:43:
+usb_ohci.c: At top level:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/usb.h:190:13: warning: inline function ‘wait_ms’ declared but never defined
+  190 | inline void wait_ms(unsigned long ms);
+      |             ^~~~~~~
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/ubifs'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o strmhz.o strmhz.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o ext2fs.o ext2fs.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o usbd-otg-hs.o usbd-otg-hs.c -c
+arm-none-linux-gnueabihf-ar crv libyaffs2.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o reset.o reset.c -c
+ext2fs.c: In function ‘ext2fs_format’:
+ext2fs.c:1051:47: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘ulong’ {aka ‘long unsigned int’} [-Wformat=]
+ 1051 |         printf("Partition%d: Start Address(0x%x), Size(0x%x)\n", part_no, info.start, info.size);
+      |                                              ~^                           ~~~~~~~~~~
+      |                                               |                               |
+      |                                               unsigned int                    ulong {aka long unsigned int}
+      |                                              %lx
+ext2fs.c:1051:59: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 4 has type ‘ulong’ {aka ‘long unsigned int’} [-Wformat=]
+ 1051 |         printf("Partition%d: Start Address(0x%x), Size(0x%x)\n", part_no, info.start, info.size);
+      |                                                          ~^                           ~~~~~~~~~
+      |                                                           |                               |
+      |                                                           unsigned int                    ulong {aka long unsigned int}
+      |                                                          %lx
+ext2fs.c:1561:44: warning: assignment to ‘uint8_t *’ {aka ‘unsigned char *’} from incompatible pointer type ‘uint32_t *’ {aka ‘unsigned int *’} [-Wincompatible-pointer-types]
+ 1561 |                                 blk_bitmap = (uint32_t *)(img3 + (4 * i));
+      |                                            ^
+ext2fs.c:1585:44: warning: assignment to ‘uint8_t *’ {aka ‘unsigned char *’} from incompatible pointer type ‘uint32_t *’ {aka ‘unsigned int *’} [-Wincompatible-pointer-types]
+ 1585 |                                 blk_bitmap = (uint32_t *)(img3 + (4 * i));
+      |                                            ^
+ext2fs.c:1598:44: warning: assignment to ‘uint8_t *’ {aka ‘unsigned char *’} from incompatible pointer type ‘uint32_t *’ {aka ‘unsigned int *’} [-Wincompatible-pointer-types]
+ 1598 |                                 blk_bitmap = (uint32_t *)(img3 + (4 * i));
+      |                                            ^
+ext2fs.c:1647:38: warning: assignment to ‘uint8_t *’ {aka ‘unsigned char *’} from incompatible pointer type ‘uint32_t *’ {aka ‘unsigned int *’} [-Wincompatible-pointer-types]
+ 1647 |                         inode_bitmap = (uint32_t *)(img4 + (4 * i));
+      |                                      ^
+ext2fs.c:1652:38: warning: assignment to ‘uint8_t *’ {aka ‘unsigned char *’} from incompatible pointer type ‘uint32_t *’ {aka ‘unsigned int *’} [-Wincompatible-pointer-types]
+ 1652 |                         inode_bitmap = (uint32_t *)img4;
+      |                                      ^
+ext2fs.c:1700:23: warning: assignment to ‘struct inode_desc *’ from incompatible pointer type ‘struct inode *’ [-Wincompatible-pointer-types]
+ 1700 |                 inode = (struct inode *)img5;
+      |                       ^
+ext2fs.c:1706:23: warning: assignment to ‘struct inode_desc *’ from incompatible pointer type ‘struct inode *’ [-Wincompatible-pointer-types]
+ 1706 |                 inode = (struct inode *)(img5 + sizeof(struct inode_desc));
+      |                       ^
+ext2fs.c:1792:23: warning: assignment to ‘struct inode_desc *’ from incompatible pointer type ‘struct inode *’ [-Wincompatible-pointer-types]
+ 1792 |                 inode = (struct inode *)(img5 + sizeof(struct inode_desc) * 6);
+      |                       ^
+ext2fs.c:1835:31: warning: assignment to ‘struct inode_desc *’ from incompatible pointer type ‘struct inode *’ [-Wincompatible-pointer-types]
+ 1835 |                         inode = (struct inode *)(img5 + sizeof(struct
+      |                               ^
+ext2fs.c:1970:69: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+ 1970 |                                         printf("d_indirect_point:0x%x\n",
+      |                                                                    ~^
+      |                                                                     |
+      |                                                                     unsigned int
+      |                                                                    %lx
+ 1971 |                                                 (d_indirect_pointer_addr * 8) + info.start);
+      |                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                               |
+      |                                                                               long unsigned int
+ext2fs.c:1984:23: warning: assignment to ‘struct inode_desc *’ from incompatible pointer type ‘struct inode *’ [-Wincompatible-pointer-types]
+ 1984 |                 inode = (struct inode *)(img5 + sizeof(struct inode_desc) * 10);
+      |                       ^
+ext2fs.c:1241:26: warning: unused variable ‘default_used_blk’ [-Wunused-variable]
+ 1241 |                 uint32_t default_used_blk = 0;
+      |                          ^~~~~~~~~~~~~~~~
+ext2fs.c:1240:26: warning: unused variable ‘normal_used_blk’ [-Wunused-variable]
+ 1240 |                 uint32_t normal_used_blk = 0;
+      |                          ^~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o time.o time.c -c
+usbd-otg-hs.c: In function ‘s3c_usb_set_feature’:
+usbd-otg-hs.c:693:17: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  693 |                 if (otg.dev_req.wValue_L == 1)
+      |                 ^~
+usbd-otg-hs.c:695:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  695 |                         break;
+      |                         ^~~~~
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/yaffs2'
+make -C net/
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o eabi_compat.o eabi_compat.c -c
+arm-none-linux-gnueabihf-ar crv libubifs.a 
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/net'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o vsprintf.o vsprintf.c -c
+usbd-otg-hs.c: In function ‘s3c_usb_transfer_ep0’:
+usbd-otg-hs.c:1183:25: warning: array subscript 24 is outside array bounds of ‘const u8[9]’ {aka ‘const unsigned char[9]’} [-Warray-bounds]
+ 1183 |                         s3c_usb_write_ep0_fifo(((u8 *)&config_high)+24, 8);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+usbd-otg-hs.c:269:10: note: while referencing ‘config_high’
+  269 | const u8 config_high[] =
+      |          ^~~~~~~~~~~
+usbd-otg-hs.c:1175:25: warning: array subscript 16 is outside array bounds of ‘const u8[9]’ {aka ‘const unsigned char[9]’} [-Warray-bounds]
+ 1175 |                         s3c_usb_write_ep0_fifo(((u8 *)&config_high)+16, 8);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+usbd-otg-hs.c:269:10: note: while referencing ‘config_high’
+  269 | const u8 config_high[] =
+      |          ^~~~~~~~~~~
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/ubifs'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o dev.o dev.c -c
+arm-none-linux-gnueabihf-ar crv libarm.a board.o bootm.o cache.o cache-cp15.o interrupts.o reset.o
+ext2fs.c:994:29: warning: ‘temp_val’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  994 |         (p)[3] = (__u8)((x) >> 030)
+      |                             ^~
+ext2fs.c:1841:34: note: ‘temp_val’ was declared here
+ 1841 |                         uint32_t temp_val;
+      |                                  ^~~~~~~~
+ext2fs.c:994:29: warning: ‘temp_val’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  994 |         (p)[3] = (__u8)((x) >> 030)
+      |                             ^~
+ext2fs.c:1434:34: note: ‘temp_val’ was declared here
+ 1434 |                         uint32_t temp_val;
+      |                                  ^~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o interrupts.o interrupts.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o zlib.o zlib.c -c
+a - board.o
+a - bootm.o
+a - cache.o
+a - cache-cp15.o
+a - interrupts.o
+a - reset.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_arm'
+make -C disk/
+arm-none-linux-gnueabihf-ar crv libnet.a 
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/disk'
+make -C drivers/bios_emulator/
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/net'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cpu_info.o cpu_info.c -c
+make -C drivers/block/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/bios_emulator'
+cpu_info.c: In function ‘arch_cpu_init’:
+cpu_info.c:93:48: warning: implicit declaration of function ‘get_ARM_CLK’; did you mean ‘get_APLL_CLK’? [-Wimplicit-function-declaration]
+   93 |         printf("        ARM_CLOCK = %ldMHz\n", get_ARM_CLK()/1000000);
+      |                                                ^~~~~~~~~~~
+      |                                                get_APLL_CLK
+cpu_info.c:93:39: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 2 has type ‘int’ [-Wformat=]
+   93 |         printf("        ARM_CLOCK = %ldMHz\n", get_ARM_CLK()/1000000);
+      |                                     ~~^        ~~~~~~~~~~~~~~~~~~~~~
+      |                                       |                     |
+      |                                       long int              int
+      |                                     %d
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o onenand.o onenand.c -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/block'
+arm-none-linux-gnueabihf-ar crv libext2fs.a ext2fs.o dev.o
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o onenand_cp.o onenand_cp.c -c
+a - ext2fs.o
+a - dev.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/fs/ext2'
+make -C drivers/dma/
+arm-none-linux-gnueabihf-ar crv libatibiosemu.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o fastboot.o fastboot.c -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/dma'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/bios_emulator'
+make -C drivers/fpga/
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o part.o part.c -c
+arm-none-linux-gnueabihf-ar crv libblock.a 
+fastboot.c:93: warning: "MIN" redefined
+   93 | #define MIN(x, y)               ((x < y) ? x : y)
+      | 
+In file included from fastboot.c:14:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:189: note: this is the location of the previous definition
+  189 | #define MIN(x, y)  min(x, y)
+      | 
+fastboot.c: In function ‘fboot_usb_set_feature’:
+fastboot.c:923:17: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  923 |                 if (fboot_otg.dev_req.wValue_L == 1)
+      |                 ^~
+fastboot.c:925:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  925 |                         break;
+      |                         ^~~~~
+fastboot.c: In function ‘fboot_usb_int_bulkin’:
+fastboot.c:1712:41: warning: passing argument 1 of ‘fboot_usb_write_in_fifo’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1712 |                 fboot_usb_write_in_fifo(reply_msg,strlen(reply_msg));
+      |                                         ^~~~~~~~~
+fastboot.c:773:34: note: expected ‘u8 *’ {aka ‘unsigned char *’} but argument is of type ‘const char *’
+  773 | void fboot_usb_write_in_fifo(u8 *buf, int num)
+      |                              ~~~~^~~
+fastboot.c:1697:13: warning: unused variable ‘DIEPCTL_IN’ [-Wunused-variable]
+ 1697 |         u32 DIEPCTL_IN=readl(S5P_OTG_DIEPCTL_IN);
+      |             ^~~~~~~~~~
+fastboot.c:1696:13: warning: unused variable ‘remain_cnt’ [-Wunused-variable]
+ 1696 |         u32 remain_cnt;
+      |             ^~~~~~~~~~
+fastboot.c:1695:13: warning: unused variable ‘bulkin_buf’ [-Wunused-variable]
+ 1695 |         u8* bulkin_buf;
+      |             ^~~~~~~~~~
+fastboot.c: In function ‘fboot_usb_int_bulkout’:
+fastboot.c:1935:43: warning: pointer targets in passing argument 1 of ‘sprintf’ differ in signedness [-Wpointer-sign]
+ 1935 |                 sprintf(fastboot_bulk_fifo+fifo_cnt_byte, "\0"); // append null
+      |                         ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+      |                                           |
+      |                                           u8 * {aka unsigned char *}
+In file included from fastboot.c:14:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:644:24: note: expected ‘char *’ but argument is of type ‘u8 *’ {aka ‘unsigned char *’}
+  644 | int     sprintf(char * buf, const char *fmt, ...)
+      |                 ~~~~~~~^~~
+fastboot.c:1935:60: warning: embedded ‘\0’ in format [-Wformat-contains-nul]
+ 1935 |                 sprintf(fastboot_bulk_fifo+fifo_cnt_byte, "\0"); // append null
+      |                                                            ^~
+fastboot.c: In function ‘fboot_usb_transfer’:
+fastboot.c:2370:13: warning: unused variable ‘tmp’ [-Wunused-variable]
+ 2370 |         u32 tmp;
+      |             ^~~
+fastboot.c:2369:13: warning: unused variable ‘DIEPINT_IN’ [-Wunused-variable]
+ 2369 |         u32 DIEPINT_IN=readl(S5P_OTG_DIEPINT_IN);
+      |             ^~~~~~~~~~
+fastboot.c:2368:13: warning: unused variable ‘DIEPCTL_IN’ [-Wunused-variable]
+ 2368 |         u32 DIEPCTL_IN=readl(S5P_OTG_DIEPCTL_IN);
+      |             ^~~~~~~~~~
+fastboot.c: In function ‘fboot_usb_int_hndlr’:
+fastboot.c:2450:13: warning: unused variable ‘val’ [-Wunused-variable]
+ 2450 |         u32 val;
+      |             ^~~
+fastboot.c: In function ‘fastboot_init’:
+fastboot.c:2604:12: warning: unused variable ‘devctl’ [-Wunused-variable]
+ 2604 |         u8 devctl;
+      |            ^~~~~~
+fastboot.c: In function ‘fastboot_poll’:
+fastboot.c:2680:13: warning: unused variable ‘intrrx’ [-Wunused-variable]
+ 2680 |         u16 intrrx;
+      |             ^~~~~~
+fastboot.c:2679:13: warning: unused variable ‘intrtx’ [-Wunused-variable]
+ 2679 |         u16 intrtx;
+      |             ^~~~~~
+fastboot.c:2678:13: warning: variable ‘intrusb’ set but not used [-Wunused-but-set-variable]
+ 2678 |         u32 intrusb;
+      |             ^~~~~~~
+fastboot.c: In function ‘fastboot_tx_status’:
+fastboot.c:2711:22: warning: unused variable ‘i’ [-Wunused-variable]
+ 2711 |         unsigned int i;
+      |                      ^
+fastboot.c:2710:13: warning: unused variable ‘ret’ [-Wunused-variable]
+ 2710 |         int ret = 1;
+      |             ^~~
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/fpga'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/block'
+make -C drivers/gpio/
+arm-none-linux-gnueabihf-ar crv libgeneric.a crc16.o crc32.o ctype.o display_options.o div64.o gunzip.o ldiv.o net_utils.o string.o strmhz.o time.o vsprintf.o zlib.o
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o part_dos.o part_dos.c -c
+arm-none-linux-gnueabihf-ar crv libdma.a 
+a - crc16.o
+a - crc32.o
+a - ctype.o
+a - display_options.o
+a - div64.o
+a - gunzip.o
+a - ldiv.o
+a - net_utils.o
+a - string.o
+a - strmhz.o
+a - time.o
+a - vsprintf.o
+a - zlib.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/lib_generic'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o pmic.o pmic.c -c
+fastboot.c: In function ‘fboot_usb_transfer_ep0’:
+fastboot.c:1416:25: warning: array subscript 24 is outside array bounds of ‘const u8[9]’ {aka ‘const unsigned char[9]’} [-Warray-bounds]
+ 1416 |                         fboot_usb_write_ep0_fifo(((u8 *)&fboot_config_high)+24, 8);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:435:10: note: while referencing ‘fboot_config_high’
+  435 | const u8 fboot_config_high[] =
+      |          ^~~~~~~~~~~~~~~~~
+fastboot.c:1408:25: warning: array subscript 16 is outside array bounds of ‘const u8[9]’ {aka ‘const unsigned char[9]’} [-Warray-bounds]
+ 1408 |                         fboot_usb_write_ep0_fifo(((u8 *)&fboot_config_high)+16, 8);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:435:10: note: while referencing ‘fboot_config_high’
+  435 | const u8 fboot_config_high[] =
+      |          ^~~~~~~~~~~~~~~~~
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/gpio'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/dma'
+make -C drivers/hwmon/
+In file included from pmic.c:6:
+gpio.h:445:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  445 | int gioGetNumOfPads();
+      | ^~~
+pmic.c: In function ‘I2C_S5M8767_VolSetting’:
+pmic.c:40:12: warning: unused variable ‘read_data’ [-Wunused-variable]
+   40 |         u8 read_data;
+      |            ^~~~~~~~~
+pmic.c:39:22: warning: variable ‘reg_bitpos’ set but not used [-Wunused-but-set-variable]
+   39 |         u8 reg_addr, reg_bitpos, reg_bitmask, vol_level;
+      |                      ^~~~~~~~~~
+pmic.c: In function ‘pmic8767_init’:
+pmic.c:85:12: warning: unused variable ‘read_data’ [-Wunused-variable]
+   85 |         u8 read_data;
+      |            ^~~~~~~~~
+pmic.c: In function ‘PMIC_InitIp’:
+pmic.c:257:39: warning: passing argument 2 of ‘lowlevel_init_max8997’ from incompatible pointer type [-Wincompatible-pointer-types]
+  257 |            lowlevel_init_max8997(0x5a,&val,1);
+      |                                       ^~~~
+      |                                       |
+      |                                       unsigned int *
+pmic.c:21:72: note: expected ‘unsigned char *’ but argument is of type ‘unsigned int *’
+   21 | extern void lowlevel_init_max8997(unsigned char Address,unsigned char *Val,int flag);
+      |                                                         ~~~~~~~~~~~~~~~^~~
+pmic.c:315:37: warning: passing argument 2 of ‘lowlevel_init_max8997’ from incompatible pointer type [-Wincompatible-pointer-types]
+  315 |         lowlevel_init_max8997(0x70, &val, 1);
+      |                                     ^~~~
+      |                                     |
+      |                                     unsigned int *
+pmic.c:21:72: note: expected ‘unsigned char *’ but argument is of type ‘unsigned int *’
+   21 | extern void lowlevel_init_max8997(unsigned char Address,unsigned char *Val,int flag);
+      |                                                         ~~~~~~~~~~~~~~~^~~
+pmic.c:136:12: warning: unused variable ‘addr’ [-Wunused-variable]
+  136 |         u8 addr;
+      |            ^~~~
+arm-none-linux-gnueabihf-ar crv libdisk.a part.o part_dos.o
+arm-none-linux-gnueabihf-ar crv libfpga.a 
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/hwmon'
+fastboot.c: In function ‘fastboot_init’:
+fastboot.c:2615:23: warning: array subscript 2 is above array bounds of ‘char *[2]’ [-Warray-bounds]
+ 2615 |         device_strings[DEVICE_STRING_PRODUCT_INDEX]       = "smdkc210";
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:168:14: note: while referencing ‘device_strings’
+  168 | static char *device_strings[DEVICE_STRING_MANUFACTURER_INDEX+1];
+      |              ^~~~~~~~~~~~~~
+fastboot.c:2593:31: warning: array subscript 3 is above array bounds of ‘char *[2]’ [-Warray-bounds]
+ 2593 |                 device_strings[DEVICE_STRING_SERIAL_NUMBER_INDEX] =
+      |                 ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:168:14: note: while referencing ‘device_strings’
+  168 | static char *device_strings[DEVICE_STRING_MANUFACTURER_INDEX+1];
+      |              ^~~~~~~~~~~~~~
+fastboot.c:2581:31: warning: array subscript 3 is above array bounds of ‘char *[2]’ [-Warray-bounds]
+ 2581 |                 device_strings[DEVICE_STRING_SERIAL_NUMBER_INDEX] = "SLSI0123";
+      |                 ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:168:14: note: while referencing ‘device_strings’
+  168 | static char *device_strings[DEVICE_STRING_MANUFACTURER_INDEX+1];
+      |              ^~~~~~~~~~~~~~
+fastboot.c:2635:23: warning: array subscript 4 is above array bounds of ‘char *[2]’ [-Warray-bounds]
+ 2635 |         device_strings[DEVICE_STRING_CONFIG_INDEX]        = "Android Fastboot";
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o gpio.o gpio.c -c
+fastboot.c:168:14: note: while referencing ‘device_strings’
+  168 | static char *device_strings[DEVICE_STRING_MANUFACTURER_INDEX+1];
+      |              ^~~~~~~~~~~~~~
+fastboot.c:2636:23: warning: array subscript 5 is above array bounds of ‘char *[2]’ [-Warray-bounds]
+ 2636 |         device_strings[DEVICE_STRING_INTERFACE_INDEX]     = "Android Fastboot";
+      |         ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:168:14: note: while referencing ‘device_strings’
+  168 | static char *device_strings[DEVICE_STRING_MANUFACTURER_INDEX+1];
+      |              ^~~~~~~~~~~~~~
+fastboot.c:2640:75: warning: array subscript 2 is above array bounds of ‘char *[2]’ [-Warray-bounds]
+ 2640 |         fastboot_interface->product_name                  = device_strings[DEVICE_STRING_PRODUCT_INDEX];
+      |                                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:168:14: note: while referencing ‘device_strings’
+  168 | static char *device_strings[DEVICE_STRING_MANUFACTURER_INDEX+1];
+      |              ^~~~~~~~~~~~~~
+fastboot.c:2641:75: warning: array subscript 3 is above array bounds of ‘char *[2]’ [-Warray-bounds]
+ 2641 |         fastboot_interface->serial_no                     = device_strings[DEVICE_STRING_SERIAL_NUMBER_INDEX];
+      |                                                             ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fastboot.c:168:14: note: while referencing ‘device_strings’
+  168 | static char *device_strings[DEVICE_STRING_MANUFACTURER_INDEX+1];
+      |              ^~~~~~~~~~~~~~
+make -C drivers/i2c/
+a - part.o
+a - part_dos.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/disk'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/fpga'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o i2c.o i2c.c -c
+arm-none-linux-gnueabihf-ar crv libgpio.a 
+In file included from gpio.c:31:
+gpio.h:445:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  445 | int gioGetNumOfPads();
+      | ^~~
+gpio.c: In function ‘GPIO_SetFunctionAll’:
+gpio.c:645:13: warning: unused variable ‘uConRegNum’ [-Wunused-variable]
+  645 |         int uConRegNum, uOffset;
+      |             ^~~~~~~~~~
+gpio.c: In function ‘EINT_PRIORITY_XA’:
+gpio.c:5152:67: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+ 5152 |        uConValue = (uConValue & ~(0x1<<(uEINT_No-1)))|(1<<uEINT_No-1);
+      |                                                           ~~~~~~~~^~
+gpio.c: In function ‘EINT_PRIORITY_XB’:
+gpio.c:5174:67: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+ 5174 |        uConValue = (uConValue & ~(0x1<<(uEINT_No-1)))|(1<<uEINT_No-1);
+      |                                                           ~~~~~~~~^~
+gpio.c: In function ‘Get_EINTSVC_XA’:
+gpio.c:5192:23: warning: unused variable ‘pGPIO_Base_Addr’ [-Wunused-variable]
+ 5192 |         volatile int *pGPIO_Base_Addr;
+      |                       ^~~~~~~~~~~~~~~
+gpio.c: In function ‘Get_EINTSVC_XB’:
+gpio.c:5211:23: warning: unused variable ‘pGPIO_Base_Addr’ [-Wunused-variable]
+ 5211 |         volatile int *pGPIO_Base_Addr;
+      |                       ^~~~~~~~~~~~~~~
+gpio.c: In function ‘Get_EINTSVCPEND_XA’:
+gpio.c:5231:23: warning: unused variable ‘pGPIO_Base_Addr’ [-Wunused-variable]
+ 5231 |         volatile int *pGPIO_Base_Addr;
+      |                       ^~~~~~~~~~~~~~~
+gpio.c: In function ‘Get_EINTSVCPEND_XB’:
+gpio.c:5249:23: warning: unused variable ‘pGPIO_Base_Addr’ [-Wunused-variable]
+ 5249 |         volatile int *pGPIO_Base_Addr;
+      |                       ^~~~~~~~~~~~~~~
+make -C drivers/input/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/i2c'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/gpio'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmu.o cmu.c -c
+In file included from i2c.c:30:
+gpio.h:445:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  445 | int gioGetNumOfPads();
+      | ^~~
+In file included from i2c.c:32:
+cmu.h:572:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  572 | u32 SYSC_GetNumOfMux();
+      | ^~~
+cmu.h:581:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  581 | u32 SYSC_GetNumOfDiv();
+      | ^~~
+cmu.h:592:22: warning: extra tokens at end of #endif directive [-Wendif-labels]
+  592 | #endif /* __CMU_H_ */_
+      |                      ^
+i2c.c: In function ‘I2C_PrintErrorCase’:
+i2c.c:624:9: warning: enumeration value ‘I2C_SUCCESS’ not handled in switch [-Wswitch]
+  624 |         switch (eError)
+      |         ^~~~~~
+i2c.c:624:9: warning: enumeration value ‘I2C_INVALID_ADDRESS’ not handled in switch [-Wswitch]
+i2c.c: In function ‘I2C_SetGPIO’:
+i2c.c:796:9: warning: enumeration value ‘I2C_CHANNEL_MAX’ not handled in switch [-Wswitch]
+  796 |         switch (eCh)
+      |         ^~~~~~
+At top level:
+i2c.c:481:13: warning: ‘I2C_SendForHdmiDdc’ defined but not used [-Wunused-function]
+  481 | static bool I2C_SendForHdmiDdc(I2C_CHANNEL eCh, u8 ucSlvAddr, u8 aData[], unsigned int nNumOfData)
+      |             ^~~~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-ar crv libhwmon.a 
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/input'
+In file included from cmu.c:4:
+cmu.h:572:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  572 | u32 SYSC_GetNumOfMux();
+      | ^~~
+cmu.h:581:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  581 | u32 SYSC_GetNumOfDiv();
+      | ^~~
+cmu.h:592:22: warning: extra tokens at end of #endif directive [-Wendif-labels]
+  592 | #endif /* __CMU_H_ */_
+      |                      ^
+cmu.c:215:1: warning: useless storage class specifier in empty declaration
+  215 | };
+      | ^
+cmu.c:246:1: warning: useless storage class specifier in empty declaration
+  246 | };
+      | ^
+cmu.c: In function ‘SYSC_SetCoreDiv’:
+cmu.c:844:80: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+  844 |         uRegClkDivCore1 = ( uRegClkDivCore1 & ~(0x7f<<24) )|(poCoreDiv->uDivDpm-1 << 24);
+      |                                                              ~~~~~~~~~~~~~~~~~~^~
+cmu.c:845:82: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+  845 |         uRegClkDivCore1 = ( uRegClkDivCore1 & ~(0x7f<<16) )|(poCoreDiv->uDivDvsem-1 << 16);
+      |                                                              ~~~~~~~~~~~~~~~~~~~~^~
+cmu.c: In function ‘SYSC_SetTopBusDiv’:
+cmu.c:901:83: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+  901 |         uRegClkDivTop = ( uRegClkDivTop & ~( 0x7<< 12) )|(poTopBusDiv->uDivAclk133-1 << 12 );
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~~~^~
+cmu.c:902:82: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+  902 |         uRegClkDivTop = ( uRegClkDivTop & ~( 0x7<< 8) )|(poTopBusDiv->uDivAclk160-1 << 8 );
+      |                                                          ~~~~~~~~~~~~~~~~~~~~~~~~^~
+cmu.c:903:82: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+  903 |         uRegClkDivTop = ( uRegClkDivTop & ~( 0xf<< 4) )|(poTopBusDiv->uDivAclk100-1 << 4 );
+      |                                                          ~~~~~~~~~~~~~~~~~~~~~~~~^~
+cmu.c:904:82: warning: suggest parentheses around ‘-’ inside ‘<<’ [-Wparentheses]
+  904 |         uRegClkDivTop = ( uRegClkDivTop & ~( 0x7<< 0) )|(poTopBusDiv->uDivAclk200-1 << 0 );
+      |                                                          ~~~~~~~~~~~~~~~~~~~~~~~~^~
+cmu.c: In function ‘SYSC_InitSysClk’:
+cmu.c:1031:35: warning: unused variable ‘uMpllSdiv’ [-Wunused-variable]
+ 1031 |         u32 uMpllPdiv, uMpllMdiv, uMpllSdiv;
+      |                                   ^~~~~~~~~
+cmu.c:1031:24: warning: unused variable ‘uMpllMdiv’ [-Wunused-variable]
+ 1031 |         u32 uMpllPdiv, uMpllMdiv, uMpllSdiv;
+      |                        ^~~~~~~~~
+cmu.c:1031:13: warning: unused variable ‘uMpllPdiv’ [-Wunused-variable]
+ 1031 |         u32 uMpllPdiv, uMpllMdiv, uMpllSdiv;
+      |             ^~~~~~~~~
+cmu.c:1030:35: warning: unused variable ‘uApllSdiv’ [-Wunused-variable]
+ 1030 |         u32 uApllPdiv, uApllMdiv, uApllSdiv;
+      |                                   ^~~~~~~~~
+cmu.c:1030:24: warning: unused variable ‘uApllMdiv’ [-Wunused-variable]
+ 1030 |         u32 uApllPdiv, uApllMdiv, uApllSdiv;
+      |                        ^~~~~~~~~
+cmu.c:1030:13: warning: unused variable ‘uApllPdiv’ [-Wunused-variable]
+ 1030 |         u32 uApllPdiv, uApllMdiv, uApllSdiv;
+      |             ^~~~~~~~~
+cmu.c: In function ‘SYSC_GetVcoPll4508’:
+cmu.c:1462:27: warning: variable ‘uSdiv’ set but not used [-Wunused-but-set-variable]
+ 1462 |         u32 uPdiv, uMdiv, uSdiv;
+      |                           ^~~~~
+cmu.c: In function ‘SYSC_GetVcoPll4600’:
+cmu.c:1476:27: warning: variable ‘uSdiv’ set but not used [-Wunused-but-set-variable]
+ 1476 |         u32 uPdiv, uMdiv, uSdiv, uKdiv;
+      |                           ^~~~~
+cmu.c: In function ‘SYSC_GetVcoPll4650’:
+cmu.c:1491:27: warning: variable ‘uSdiv’ set but not used [-Wunused-but-set-variable]
+ 1491 |         u32 uPdiv, uMdiv, uSdiv, uKdiv;
+      |                           ^~~~~
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/hwmon'
+make -C drivers/misc/
+cmu.c: In function ‘SYSC_SetPllByPms’:
+cmu.c:1195:16: warning: ‘fPllFout’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 1195 |         return fPllFout;
+      |                ^~~~~~~~
+arm-none-linux-gnueabihf-ar crv libi2c.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o speed.o speed.c -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/misc'
+cmu.c: In function ‘SYSC_GetVcoPll’:
+cmu.c:1223:16: warning: ‘fFvco’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 1223 |         return fFvco;
+      |                ^~~~~
+cmu.c: In function ‘SYSC_GetFoutPll’:
+cmu.c:1251:16: warning: ‘fPllFout’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 1251 |         return fPllFout;
+      |                ^~~~~~~~
+cmu.c: In function ‘SYSC_CalcPllFout’:
+cmu.c:1279:16: warning: ‘fPllFout’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 1279 |         return fPllFout;
+      |                ^~~~~~~~
+cmu.c: In function ‘SYSC_SetLocktimeVal’:
+cmu.c:14:35: warning: ‘uRegAddr’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   14 | #define Inp32(addr)             (*(volatile u32 *)(addr))
+      |                                   ^
+cmu.c:1285:13: note: ‘uRegAddr’ was declared here
+ 1285 |         u32 uRegAddr;
+      |             ^~~~~~~~
+cmu.c: In function ‘SYSC_CheckPllLock’:
+cmu.c:14:35: warning: ‘uRegAddr’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   14 | #define Inp32(addr)             (*(volatile u32 *)(addr))
+      |                                   ^
+cmu.c:1303:13: note: ‘uRegAddr’ was declared here
+ 1303 |         u32 uRegAddr;
+      |             ^~~~~~~~
+cmu.c: In function ‘SYSC_EnablePll’:
+cmu.c:14:35: warning: ‘uRegAddr’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   14 | #define Inp32(addr)             (*(volatile u32 *)(addr))
+      |                                   ^
+cmu.c:1319:13: note: ‘uRegAddr’ was declared here
+ 1319 |         u32 uRegAddr;
+      |             ^~~~~~~~
+cmu.c: In function ‘SYSC_DisablePll’:
+cmu.c:14:35: warning: ‘uRegAddr’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+   14 | #define Inp32(addr)             (*(volatile u32 *)(addr))
+      |                                   ^
+cmu.c:1336:13: note: ‘uRegAddr’ was declared here
+ 1336 |         u32 uRegAddr;
+      |             ^~~~~~~~
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/i2c'
+make -C drivers/mmc/
+cmu.c: In function ‘SYSC_GetClkFreq’:
+cmu.c:789:16: warning: ‘fClk’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  789 |         return fClk;
+      |                ^~~~
+arm-none-linux-gnueabihf-ar crv libinput.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o max8997.o max8997.c -c
+make -C drivers/mtd/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mmc'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/input'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o setup_hsmmc.o setup_hsmmc.c -c
+arm-none-linux-gnueabihf-ar crv libmisc.a 
+max8997.c:277:6: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  277 | void max8997_init()
+      |      ^~~~~~~~~~~~
+max8997.c: In function ‘lowlevel_init_max8997’:
+max8997.c:296:13: warning: variable ‘ret’ set but not used [-Wunused-but-set-variable]
+  296 |         int ret;
+      |             ^~~
+max8997.c:295:23: warning: variable ‘write_data’ set but not used [-Wunused-but-set-variable]
+  295 |         unsigned char write_data = 0;
+      |                       ^~~~~~~~~~
+At top level:
+max8997.c:275:12: warning: ‘g_flag’ defined but not used [-Wunused-variable]
+  275 | static int g_flag = 0;
+      |            ^~~~~~
+make -C drivers/mtd/nand/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/misc'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o movi.o movi.c -c
+setup_hsmmc.c:9:38: warning: ‘struct mshci_host’ declared inside parameter list will not be visible outside of this definition or declaration
+    9 | extern void mshci_fifo_deinit(struct mshci_host *host);
+      |                                      ^~~~~~~~~~
+setup_hsmmc.c: In function ‘clear_hsmmc_clock_div’:
+setup_hsmmc.c:20:27: warning: passing argument 1 of ‘mshci_fifo_deinit’ from incompatible pointer type [-Wincompatible-pointer-types]
+   20 |         mshci_fifo_deinit(mmc);
+      |                           ^~~
+      |                           |
+      |                           struct mmc *
+setup_hsmmc.c:9:50: note: expected ‘struct mshci_host *’ but argument is of type ‘struct mmc *’
+    9 | extern void mshci_fifo_deinit(struct mshci_host *host);
+      |                               ~~~~~~~~~~~~~~~~~~~^~~~
+setup_hsmmc.c: In function ‘set_hsmmc_pre_ratio’:
+setup_hsmmc.c:52:15: warning: implicit declaration of function ‘get_MPLL_CLK’ [-Wimplicit-function-declaration]
+   52 |         clk = get_MPLL_CLK();
+      |               ^~~~~~~~~~~~
+setup_hsmmc.c:36:13: warning: variable ‘div’ set but not used [-Wunused-but-set-variable]
+   36 |         u32 div;
+      |             ^~~
+In file included from setup_hsmmc.c:3:
+setup_hsmmc.c: In function ‘setup_hsmmc_cfg_gpio’:
+setup_hsmmc.c:177:33: warning: suggest parentheses around arithmetic in operand of ‘|’ [-Wparentheses]
+  177 |         writel(readl(0x11000040)&~(0xf<<8)|(1<<8),0x11000040);//cdn set to be output
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/asm/io.h:71:75: note: in definition of macro ‘__arch_putl’
+   71 | #define __arch_putl(v,a)                (*(volatile unsigned int *)(a) = (v))
+      |                                                                           ^
+setup_hsmmc.c:177:9: note: in expansion of macro ‘writel’
+  177 |         writel(readl(0x11000040)&~(0xf<<8)|(1<<8),0x11000040);//cdn set to be output
+      |         ^~~~~~
+setup_hsmmc.c:137:15: warning: unused variable ‘reg’ [-Wunused-variable]
+  137 |         ulong reg;
+      |               ^~~
+make -C drivers/mtd/onenand/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/nand'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o recovery.o recovery.c -c
+movi.c:21:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+   21 | typedef u32 (*emmc441_endboot_op)();
+      | ^~~~~~~
+In file included from /home/chh/source_code/ensy4412/iTop4412_uboot/include/config.h:5,
+                 from /home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:37,
+                 from movi.c:1:
+movi.c: In function ‘movi_uboot_copy’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:209:33: warning: passing argument 3 of ‘copy_bl2’ makes pointer from integer without a cast [-Wint-conversion]
+  209 | #define MEMORY_BASE_ADDRESS     0x40000000
+      |                                 ^
+      |                                 |
+      |                                 int
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:485:33: note: in expansion of macro ‘MEMORY_BASE_ADDRESS’
+  485 | #define CFG_PHY_UBOOT_BASE      MEMORY_BASE_ADDRESS + 0x3e00000
+      |                                 ^~~~~~~~~~~~~~~~~~~
+movi.c:36:53: note: in expansion of macro ‘CFG_PHY_UBOOT_BASE’
+   36 |         copy_bl2(MOVI_UBOOT_POS, MOVI_UBOOT_BLKCNT, CFG_PHY_UBOOT_BASE);//mj
+      |                                                     ^~~~~~~~~~~~~~~~~~
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:209:33: note: expected ‘u32 *’ {aka ‘unsigned int *’} but argument is of type ‘int’
+  209 | #define MEMORY_BASE_ADDRESS     0x40000000
+      |                                 ^
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:485:33: note: in expansion of macro ‘MEMORY_BASE_ADDRESS’
+  485 | #define CFG_PHY_UBOOT_BASE      MEMORY_BASE_ADDRESS + 0x3e00000
+      |                                 ^~~~~~~~~~~~~~~~~~~
+movi.c:36:53: note: in expansion of macro ‘CFG_PHY_UBOOT_BASE’
+   36 |         copy_bl2(MOVI_UBOOT_POS, MOVI_UBOOT_BLKCNT, CFG_PHY_UBOOT_BASE);//mj
+      |                                                     ^~~~~~~~~~~~~~~~~~
+movi.c: In function ‘emmc_uboot_copy’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:209:33: warning: passing argument 2 of ‘copy_bl2’ makes pointer from integer without a cast [-Wint-conversion]
+  209 | #define MEMORY_BASE_ADDRESS     0x40000000
+      |                                 ^
+      |                                 |
+      |                                 int
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:485:33: note: in expansion of macro ‘MEMORY_BASE_ADDRESS’
+  485 | #define CFG_PHY_UBOOT_BASE      MEMORY_BASE_ADDRESS + 0x3e00000
+      |                                 ^~~~~~~~~~~~~~~~~~~
+movi.c:57:37: note: in expansion of macro ‘CFG_PHY_UBOOT_BASE’
+   57 |         copy_bl2(MOVI_UBOOT_BLKCNT, CFG_PHY_UBOOT_BASE); //mj
+      |                                     ^~~~~~~~~~~~~~~~~~
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:209:33: note: expected ‘u32 *’ {aka ‘unsigned int *’} but argument is of type ‘int’
+  209 | #define MEMORY_BASE_ADDRESS     0x40000000
+      |                                 ^
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:485:33: note: in expansion of macro ‘MEMORY_BASE_ADDRESS’
+  485 | #define CFG_PHY_UBOOT_BASE      MEMORY_BASE_ADDRESS + 0x3e00000
+      |                                 ^~~~~~~~~~~~~~~~~~~
+movi.c:57:37: note: in expansion of macro ‘CFG_PHY_UBOOT_BASE’
+   57 |         copy_bl2(MOVI_UBOOT_BLKCNT, CFG_PHY_UBOOT_BASE); //mj
+      |                                     ^~~~~~~~~~~~~~~~~~
+movi.c:43:15: warning: unused variable ‘ptemp’ [-Wunused-variable]
+   43 |         char *ptemp;
+      |               ^~~~~
+movi.c:42:13: warning: unused variable ‘i’ [-Wunused-variable]
+   42 |         int i;
+      |             ^
+In file included from /home/chh/source_code/ensy4412/iTop4412_uboot/include/config.h:5,
+                 from /home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:37,
+                 from movi.c:1:
+movi.c: In function ‘emmc441_uboot_copy’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:209:33: warning: passing argument 2 of ‘copy_bl2’ makes pointer from integer without a cast [-Wint-conversion]
+  209 | #define MEMORY_BASE_ADDRESS     0x40000000
+      |                                 ^
+      |                                 |
+      |                                 int
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:485:33: note: in expansion of macro ‘MEMORY_BASE_ADDRESS’
+  485 | #define CFG_PHY_UBOOT_BASE      MEMORY_BASE_ADDRESS + 0x3e00000
+      |                                 ^~~~~~~~~~~~~~~~~~~
+movi.c:78:46: note: in expansion of macro ‘CFG_PHY_UBOOT_BASE’
+   78 |         copy_bl2(/*0x8,*/ MOVI_UBOOT_BLKCNT, CFG_PHY_UBOOT_BASE); //mj
+      |                                              ^~~~~~~~~~~~~~~~~~
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:209:33: note: expected ‘void *’ but argument is of type ‘int’
+  209 | #define MEMORY_BASE_ADDRESS     0x40000000
+      |                                 ^
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:485:33: note: in expansion of macro ‘MEMORY_BASE_ADDRESS’
+  485 | #define CFG_PHY_UBOOT_BASE      MEMORY_BASE_ADDRESS + 0x3e00000
+      |                                 ^~~~~~~~~~~~~~~~~~~
+movi.c:78:46: note: in expansion of macro ‘CFG_PHY_UBOOT_BASE’
+   78 |         copy_bl2(/*0x8,*/ MOVI_UBOOT_BLKCNT, CFG_PHY_UBOOT_BASE); //mj
+      |                                              ^~~~~~~~~~~~~~~~~~
+movi.c:65:15: warning: unused variable ‘ptemp’ [-Wunused-variable]
+   65 |         char *ptemp;
+      |               ^~~~~
+movi.c:64:13: warning: unused variable ‘i’ [-Wunused-variable]
+   64 |         int i;
+      |             ^
+movi.c: In function ‘movi_write_env’:
+movi.c:87:9: warning: implicit declaration of function ‘movi_write’; did you mean ‘movi_write_env’? [-Wimplicit-function-declaration]
+   87 |         movi_write(raw_area_control.image[2].start_blk,
+      |         ^~~~~~~~~~
+      |         movi_write_env
+movi.c: In function ‘movi_read_env’:
+movi.c:93:9: warning: implicit declaration of function ‘movi_read’; did you mean ‘mmc_read’? [-Wimplicit-function-declaration]
+   93 |         movi_read(raw_area_control.image[2].start_blk,
+      |         ^~~~~~~~~
+      |         mmc_read
+movi.c: In function ‘movi_calc_checksum_bl1’:
+movi.c:124:15: warning: variable ‘src’ set but not used [-Wunused-but-set-variable]
+  124 |         ulong src;
+      |               ^~~
+make -C drivers/mtd/ubi/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/onenand'
+arm-none-linux-gnueabihf-ar crv libmtd.a 
+recovery.c: In function ‘factory_reset’:
+recovery.c:26:13: warning: implicit declaration of function ‘ext2fs_format’ [-Wimplicit-function-declaration]
+   26 |         if (ext2fs_format(dev_desc, 3) != 0)
+      |             ^~~~~~~~~~~~~
+recovery.c:42:21: warning: implicit declaration of function ‘fat_format_device’ [-Wimplicit-function-declaration]
+   42 |                 if (fat_format_device(dev_desc, 1) != 0)
+      |                     ^~~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc   -D__ASSEMBLY__ -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a   -o cpu_init.o cpu_init.S -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/ubi'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd'
+make -C drivers/mtd/spi/
+arm-none-linux-gnueabihf-ar crv libnand.a 
+cpu_init.S:480:9: warning: extra tokens at end of #else directive [-Wendif-labels]
+  480 | #else   @MIU_1BIT_INTERLEAVED | MIU_2BIT_INTERLEAVED
+      |         ^
+cpu_init.S:616:9: warning: extra tokens at end of #else directive [-Wendif-labels]
+  616 | #else   @MIU_1BIT_INTERLEAVED | MIU_2BIT_INTERLEAVED
+      |         ^
+arm-none-linux-gnueabihf-ar crv libs5pc210.a nand.o nand_cp.o serial.o usb_ohci.o usbd-otg-hs.o interrupts.o cpu_info.o onenand.o onenand_cp.o fastboot.o pmic.o gpio.o i2c.o cmu.o speed.o max8997.o setup_hsmmc.o movi.o recovery.o cpu_init.o
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o mmc.o mmc.c -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/spi'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/nand'
+arm-none-linux-gnueabihf-ar crv libonenand.a 
+make -C drivers/net/
+a - nand.o
+a - nand_cp.o
+a - serial.o
+a - usb_ohci.o
+a - usbd-otg-hs.o
+a - interrupts.o
+a - cpu_info.o
+a - onenand.o
+a - onenand_cp.o
+a - fastboot.o
+a - pmic.o
+a - gpio.o
+a - i2c.o
+a - cmu.o
+a - speed.o
+a - max8997.o
+a - setup_hsmmc.o
+a - movi.o
+a - recovery.o
+a - cpu_init.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9/s5pc210'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o s3c_hsmmc.o s3c_hsmmc.c -c
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/onenand'
+arm-none-linux-gnueabihf-ar crv libubi.a 
+make -C drivers/net/phy/
+mmc.c: In function ‘mmc_send_ext_csd’:
+mmc.c:321:19: warning: pointer targets in assignment from ‘u8 *’ {aka ‘unsigned char *’} to ‘char *’ differ in signedness [-Wpointer-sign]
+  321 |         data.dest = ext_csd;
+      |                   ^
+mmc.c: In function ‘sd_switch’:
+mmc.c:436:19: warning: pointer targets in assignment from ‘u8 *’ {aka ‘unsigned char *’} to ‘char *’ differ in signedness [-Wpointer-sign]
+  436 |         data.dest = resp;
+      |                   ^
+mmc.c: In function ‘sd_change_freq’:
+mmc.c:475:19: warning: pointer targets in assignment from ‘u8 *’ {aka ‘unsigned char *’} to ‘char *’ differ in signedness [-Wpointer-sign]
+  475 |         data.dest = (u8 *)&scr;
+      |                   ^
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/net'
+mmc.c: In function ‘mmc_initialize’:
+mmc.c:1290:35: warning: format ‘%ld’ expects argument of type ‘long int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+ 1290 |                 printf("MMC%d:  %ld MB\n",dev,(mmc->capacity/(1024*1024/mmc->read_bl_len)));
+      |                                 ~~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |                         |
+      |                                   long int                  u32 {aka unsigned int}
+      |                                 %d
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/ubi'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o s5p_mshc.o s5p_mshc.c -c
+In file included from s3c_hsmmc.c:34:
+s3c_hsmmc.c: In function ‘sdhci_prepare_data’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:218:25: warning: implicit declaration of function ‘virt_to_phy_smdkc210’ [-Wimplicit-function-declaration]
+  218 | #define virt_to_phys(x) virt_to_phy_smdkc210(x)
+      |                         ^~~~~~~~~~~~~~~~~~~~
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/asm/io.h:71:75: note: in definition of macro ‘__arch_putl’
+   71 | #define __arch_putl(v,a)                (*(volatile unsigned int *)(a) = (v))
+      |                                                                           ^
+s3c_hsmmc.c:71:9: note: in expansion of macro ‘writel’
+   71 |         writel(virt_to_phys((u32)data->dest), host->ioaddr + SDHCI_DMA_ADDRESS);
+      |         ^~~~~~
+s3c_hsmmc.c:71:16: note: in expansion of macro ‘virt_to_phys’
+   71 |         writel(virt_to_phys((u32)data->dest), host->ioaddr + SDHCI_DMA_ADDRESS);
+      |                ^~~~~~~~~~~~
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/net/phy'
+s3c_hsmmc.c: In function ‘s3c_hsmmc_set_ios’:
+s3c_hsmmc.c:300:9: warning: implicit declaration of function ‘setup_sdhci0_cfg_card’ [-Wimplicit-function-declaration]
+  300 |         setup_sdhci0_cfg_card(host);
+      |         ^~~~~~~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-ar crv libspi_flash.a 
+make -C drivers/pci/
+s5p_mshc.c: In function ‘mshci_reset_all’:
+s5p_mshc.c:137:25: warning: implicit declaration of function ‘do_reset’ [-Wimplicit-function-declaration]
+  137 |                         do_reset (NULL, 0, 0, NULL);
+      |                         ^~~~~~~~
+mmc.c:1292:16: warning: ‘err’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 1292 |         return err;
+      |                ^~~
+In file included from /home/chh/source_code/ensy4412/iTop4412_uboot/include/config.h:5,
+                 from s5p_mshc.c:28:
+s5p_mshc.c: In function ‘mshci_prepare_data’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:218:25: warning: implicit declaration of function ‘virt_to_phy_smdkc210’ [-Wimplicit-function-declaration]
+  218 | #define virt_to_phys(x) virt_to_phy_smdkc210(x)
+      |                         ^~~~~~~~~~~~~~~~~~~~
+s5p_mshc.c:190:47: note: in expansion of macro ‘virt_to_phys’
+  190 |                                         (u8 *)virt_to_phys((u32)pdesc_dmac),
+      |                                               ^~~~~~~~~~~~
+s5p_mshc.c: In function ‘s5p_mshc_send_command’:
+s5p_mshc.c:308:25: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  308 |                         if (!data)
+      |                         ^~
+s5p_mshc.c:311:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  311 |                                 cmd->response[0] = mshci_readl(host, MSHCI_RESP3);
+      |                                 ^~~
+s5p_mshc.c: In function ‘mshci_fifo_init’:
+s5p_mshc.c:556:13: warning: variable ‘verid’ set but not used [-Wunused-but-set-variable]
+  556 |         u32 verid;
+      |             ^~~~~
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mtd/spi'
+s5p_mshc.c: In function ‘emmc_mode_change’:
+s5p_mshc.c:666:17: warning: implicit declaration of function ‘mmc_set_bus_width’ [-Wimplicit-function-declaration]
+  666 |                 mmc_set_bus_width(mmc, bitwidth);
+      |                 ^~~~~~~~~~~~~~~~~
+s5p_mshc.c: In function ‘s5c_mshc_init’:
+s5p_mshc.c:685:13: warning: unused variable ‘bit’ [-Wunused-variable]
+  685 |         int bit;
+      |             ^~~
+s5p_mshc.c: In function ‘mshci_fifo_deinit’:
+s5p_mshc.c:835:13: warning: unused variable ‘i’ [-Wunused-variable]
+  835 |         int i;
+      |             ^
+arm-none-linux-gnueabihf-ar crv libnet.a 
+mmc.c: In function ‘mmc_erase’:
+mmc.c:1437:36: warning: ‘blk_hc’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+ 1437 |                         erase_time = blk_hc;
+      |                         ~~~~~~~~~~~^~~~~~~~
+make -C drivers/pcmcia/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/pci'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/net'
+arm-none-linux-gnueabihf-ar crv libphy.a 
+make -C drivers/power/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/pcmcia'
+arm-none-linux-gnueabihf-ar crv libmmc.a mmc.o s3c_hsmmc.o s5p_mshc.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/net/phy'
+a - mmc.o
+a - s3c_hsmmc.o
+a - s5p_mshc.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/mmc'
+make -C drivers/spi/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/power'
+arm-none-linux-gnueabihf-ar crv libpci.a 
+make -C drivers/rtc/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/spi'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/pci'
+make -C drivers/serial/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/rtc'
+arm-none-linux-gnueabihf-ar crv libpower.a 
+make -C drivers/twserial/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/serial'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/power'
+arm-none-linux-gnueabihf-ar crv libspi.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o rpx_pcmcia.o rpx_pcmcia.c -c
+make -C drivers/usb/gadget/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/twserial'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/spi'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o tqm8xx_pcmcia.o tqm8xx_pcmcia.c -c
+make -C drivers/usb/host/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/gadget'
+arm-none-linux-gnueabihf-ar crv libpcmcia.a rpx_pcmcia.o tqm8xx_pcmcia.o
+arm-none-linux-gnueabihf-ar crv libserial.a 
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/host'
+a - rpx_pcmcia.o
+a - tqm8xx_pcmcia.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/pcmcia'
+make -C drivers/usb/musb/
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/serial'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o date.o date.c -c
+arm-none-linux-gnueabihf-ar crv libtws.a 
+make -C drivers/usb/phy/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/musb'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/twserial'
+arm-none-linux-gnueabihf-ar crv libusb_gadget.a 
+arm-none-linux-gnueabihf-ar crv librtc.a date.o
+make -C drivers/video/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/phy'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/gadget'
+arm-none-linux-gnueabihf-ar crv libusb_host.a 
+a - date.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/rtc'
+make -C drivers/watchdog/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/video'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/host'
+arm-none-linux-gnueabihf-ar crv libusb_musb.a 
+make -C common/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/watchdog'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/musb'
+make -C libfdt/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/common'
+make -C api/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/libfdt'
+arm-none-linux-gnueabihf-ar crv libwatchdog.a 
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o twl4030.o twl4030.c -c
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/api'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/watchdog'
+make -C post/
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o videomodes.o videomodes.c -c
+arm-none-linux-gnueabihf-ar crv libusb_phy.a twl4030.o
+arm-none-linux-gnueabihf-ar crv libfdt.a 
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/post'
+videomodes.c: In function ‘video_get_params’:
+videomodes.c:159:20: warning: variable ‘t’ set but not used [-Wunused-but-set-variable]
+  159 |         int i = 0, t;
+      |                    ^
+a - twl4030.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/usb/phy'
+make -C /home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9/ u-boot.lds
+arm-none-linux-gnueabihf-ar crv libvideo.a videomodes.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/libfdt'
+arm-none-linux-gnueabihf-ar crv libapi.a 
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+a - videomodes.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/drivers/video'
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/api'
+(echo create libpost.a; for lib in   ; \
+ do echo addlib $lib; done; echo save) \
+| arm-none-linux-gnueabihf-ar -M
+make[1]: Nothing to be done for 'u-boot.lds'.
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9'
+arm-none-linux-gnueabihf-gcc -E -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -include /home/chh/source_code/ensy4412/iTop4412_uboot/include/u-boot/u-boot.lds.h  -ansi -D__ASSEMBLY__ -P - </home/chh/source_code/ensy4412/iTop4412_uboot/cpu/arm_cortexa9/u-boot.lds >u-boot.lds
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/post'
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o ace_sha1.o ace_sha1.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_bdinfo.o cmd_bdinfo.c -c
+ace_sha1.c: In function ‘ace_hash_sha1_digest’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:218:25: warning: implicit declaration of function ‘virt_to_phy_smdkc210’ [-Wimplicit-function-declaration]
+  218 | #define virt_to_phys(x) virt_to_phy_smdkc210(x)
+      |                         ^~~~~~~~~~~~~~~~~~~~
+ace_sha1.c:35:34: note: in definition of macro ‘ACE_write_sfr’
+   35 |                 = (unsigned int)(_val_);} while(0)
+      |                                  ^~~~~
+ace_sha1.c:105:52: note: in expansion of macro ‘virt_to_phys’
+  105 |         ACE_write_sfr(ACE_FC_HRDMAS, (unsigned int)virt_to_phys(pBuf));
+      |                                                    ^~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_boot.o cmd_boot.c -c
+cmd_bdinfo.c: In function ‘do_bdinfo’:
+cmd_bdinfo.c:325:20: warning: initialization discards ‘volatile’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  325 |         bd_t *bd = gd->bd;
+      |                    ^~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_bootm.o cmd_bootm.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_console.o cmd_console.c -c
+cmd_bootm.c: In function ‘do_bootm’:
+cmd_bootm.c:612:21: warning: unused variable ‘val’ [-Wunused-variable]
+  612 |                 u32 val;
+      |                     ^~~
+cmd_bootm.c: In function ‘do_bootm_netbsd’:
+cmd_bootm.c:1382:22: warning: passing argument 1 of ‘loader’ discards ‘volatile’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1382 |         (*loader) (gd->bd, os_hdr, consdev, cmdline);
+      |                    ~~^~~~
+cmd_bootm.c:1382:22: note: expected ‘bd_t *’ {aka ‘struct bd_info *’} but argument is of type ‘volatile bd_t *’ {aka ‘volatile struct bd_info *’}
+cmd_bootm.c: In function ‘do_bootm_rtems’:
+cmd_bootm.c:1437:26: warning: passing argument 1 of ‘entry_point’ discards ‘volatile’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1437 |         (*entry_point)(gd->bd);
+      |                        ~~^~~~
+cmd_bootm.c:1437:26: note: expected ‘bd_t *’ {aka ‘struct bd_info *’} but argument is of type ‘volatile bd_t *’ {aka ‘volatile struct bd_info *’}
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_echo.o cmd_echo.c -c
+cmd_bootm.c: In function ‘do_bootm’:
+cmd_bootm.c:732:27: warning: ‘hdr’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  732 |         images.os.os = hdr->ih_os;
+      |                        ~~~^~~~~~~
+cmd_bootm.c:744:20: warning: ‘iflag’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  744 |                 if (iflag)
+      |                    ^
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_elf.o cmd_elf.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_ext2.o cmd_ext2.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_fastboot.o cmd_fastboot.c -c
+cmd_ext2.c: In function ‘ext_format’:
+cmd_ext2.c:304:21: warning: implicit declaration of function ‘ext2fs_format’; did you mean ‘ext4fs_format’? [-Wimplicit-function-declaration]
+  304 |                 if (ext2fs_format(dev_desc, part, filesystem_type) != 0)
+      |                     ^~~~~~~~~~~~~
+      |                     ext4fs_format
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_fat.o cmd_fat.c -c
+cmd_fastboot.c: In function ‘rx_handler’:
+cmd_fastboot.c:740:41: warning: unused variable ‘length’ [-Wunused-variable]
+  740 |                         char start[32], length[32];
+      |                                         ^~~~~~
+cmd_fastboot.c:740:30: warning: unused variable ‘start’ [-Wunused-variable]
+  740 |                         char start[32], length[32];
+      |                              ^~~~~
+cmd_fastboot.c:998:49: warning: unused variable ‘hdr’ [-Wunused-variable]
+  998 |                                 image_header_t *hdr =
+      |                                                 ^~~
+cmd_fastboot.c: At top level:
+cmd_fastboot.c:1340:12: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ 1340 | static int set_partition_table()
+      |            ^~~~~~~~~~~~~~~~~~~
+cmd_fastboot.c:1423:12: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+ 1423 | static int set_partition_table_sdmmc()
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from cmd_fastboot.c:1720:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/fat.h:195:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  195 | typedef int     (file_detectfs_func)();
+      | ^~~~~~~
+cmd_fastboot.c: In function ‘update_from_sd’:
+cmd_fastboot.c:1769:36: warning: format ‘%x’ expects argument of type ‘unsigned int’, but argument 3 has type ‘long int’ [-Wformat=]
+ 1769 |                 printf ("%ld (0x%08x) bytes read\n", size, size);
+      |                                 ~~~^                       ~~~~
+      |                                    |                       |
+      |                                    unsigned int            long int
+      |                                 %08lx
+cmd_fastboot.c:1788:34: warning: pointer targets in passing argument 1 of ‘rx_handler’ differ in signedness [-Wpointer-sign]
+ 1788 |                 ret = rx_handler(command, sizeof(command));
+      |                                  ^~~~~~~
+      |                                  |
+      |                                  char *
+cmd_fastboot.c:580:45: note: expected ‘const unsigned char *’ but argument is of type ‘char *’
+  580 | static int rx_handler (const unsigned char *buffer, unsigned int buffer_size)
+      |                        ~~~~~~~~~~~~~~~~~~~~~^~~~~~
+cmd_fastboot.c: In function ‘sd_format_mmcs’:
+cmd_fastboot.c:1814:20: warning: implicit declaration of function ‘ext2fs_format’ [-Wimplicit-function-declaration]
+ 1814 |                 if(ext2fs_format(dev_desc, part))
+      |                    ^~~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_help.o cmd_help.c -c
+In file included from cmd_fat.c:33:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/fat.h:195:1: warning: function declaration isn’t a prototype [-Wstrict-prototypes]
+  195 | typedef int     (file_detectfs_func)();
+      | ^~~~~~~
+cmd_fat.c: In function ‘do_fat_fsload’:
+cmd_fat.c:54:15: warning: implicit declaration of function ‘find_mmc_device’ [-Wimplicit-function-declaration]
+   54 |         mmc = find_mmc_device(dev);
+      |               ^~~~~~~~~~~~~~~
+cmd_fat.c:54:13: warning: assignment to ‘struct mmc *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   54 |         mmc = find_mmc_device(dev);
+      |             ^
+cmd_fat.c:55:13: warning: implicit declaration of function ‘mmc_init’; did you mean ‘mii_init’? [-Wimplicit-function-declaration]
+   55 |         if (mmc_init(mmc)) {
+      |             ^~~~~~~~
+      |             mii_init
+cmd_fat.c:144:9: warning: label ‘END’ defined but not used [-Wunused-label]
+  144 |         END:
+      |         ^~~
+cmd_fat.c: In function ‘do_fat_format’:
+cmd_fat.c:281:16: warning: too many arguments for format [-Wformat-extra-args]
+  281 |         printf("Start format MMC&d partition&d ...\n", dev, part);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_itest.o cmd_itest.c -c
+cmd_fastboot.c: In function ‘rx_handler’:
+cmd_fastboot.c:827:28: warning: ‘status’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  827 |                         if (status)
+      |                            ^
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_load.o cmd_load.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_max8997.o cmd_max8997.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_mdmupgrade.o cmd_mdmupgrade.c -c
+cmd_max8997.c: In function ‘do_max8997’:
+cmd_max8997.c:20:7: warning: unused variable ‘index’ [-Wunused-variable]
+   20 |   int index = 0;
+      |       ^~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_mem.o cmd_mem.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_misc.o cmd_misc.c -c
+cmd_mem.c: In function ‘do_mem_loop’:
+cmd_mem.c:481:34: warning: variable ‘junk’ set but not used [-Wunused-but-set-variable]
+  481 |         ulong   addr, length, i, junk;
+      |                                  ^~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_mmc.o cmd_mmc.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_mmc_fdisk.o cmd_mmc_fdisk.c -c
+cmd_mmc.c: In function ‘do_emmc’:
+cmd_mmc.c:97:30: warning: implicit declaration of function ‘emmc_boot_partition_size_change’ [-Wimplicit-function-declaration]
+   97 |                         rc = emmc_boot_partition_size_change(mmc, bootsize, rpmbsize);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cmd_mmc.c:131:30: warning: implicit declaration of function ‘emmc_mode_change’ [-Wimplicit-function-declaration]
+  131 |                         rc = emmc_mode_change(mmc,bitwidth);
+      |                              ^~~~~~~~~~~~~~~~
+cmd_mmc.c:125:44: warning: unused variable ‘host’ [-Wunused-variable]
+  125 |                         struct mshci_host *host = mmc->priv;
+      |                                            ^~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_movi.o cmd_movi.c -c
+cmd_mmc.c:151:30: warning: implicit declaration of function ‘emmc_boot_open’; did you mean ‘emmc_boot_erase’? [-Wimplicit-function-declaration]
+  151 |                         rc = emmc_boot_open(mmc);
+      |                              ^~~~~~~~~~~~~~
+      |                              emmc_boot_erase
+cmd_mmc.c:171:30: warning: implicit declaration of function ‘emmc_boot_close’; did you mean ‘emmc_boot_erase’? [-Wimplicit-function-declaration]
+  171 |                         rc = emmc_boot_close(mmc);
+      |                              ^~~~~~~~~~~~~~~
+      |                              emmc_boot_erase
+cmd_mmc.c: In function ‘do_mmcops’:
+cmd_mmc.c:444:30: warning: implicit declaration of function ‘mmc_erase’; did you mean ‘mmc_read’? [-Wimplicit-function-declaration]
+  444 |                         rc = mmc_erase(mmc, part, start, block);
+      |                              ^~~~~~~~~
+      |                              mmc_read
+cmd_mmc_fdisk.c: In function ‘get_mmc_block_count’:
+cmd_mmc_fdisk.c:332:13: warning: unused variable ‘rv’ [-Wunused-variable]
+  332 |         int rv;
+      |             ^~
+cmd_mmc_fdisk.c: In function ‘print_mmc_part_info’:
+cmd_mmc_fdisk.c:448:25: warning: variable ‘rv’ set but not used [-Wunused-but-set-variable]
+  448 |         int             rv;
+      |                         ^~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_nvedit.o cmd_nvedit.c -c
+cmd_movi.c: In function ‘init_raw_area_table’:
+cmd_movi.c:95:17: warning: this ‘else’ clause does not guard... [-Wmisleading-indentation]
+   95 |                 else
+      |                 ^~~~
+cmd_movi.c:98:25: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+   98 |                         image[2].used_blk = MOVI_FWBL1_BLKCNT+MOVI_UBOOT_BLKCNT+MOVI_BL2_BLKCNT;
+      |                         ^~~~~
+cmd_movi.c: In function ‘do_movi’:
+cmd_movi.c:161:15: warning: unused variable ‘addr_img_compare’ [-Wunused-variable]
+  161 |         char *addr_img_compare;         //used to compare the image between 4212 & 4412
+      |               ^~~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_pcmcia.o cmd_pcmcia.c -c
+cmd_nvedit.c: In function ‘_do_setenv’:
+cmd_nvedit.c:183:20: warning: initialization discards ‘volatile’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  183 |         bd_t *bd = gd->bd;
+      |                    ^~
+cmd_nvedit.c: In function ‘do_editenv’:
+cmd_nvedit.c:517:13: warning: variable ‘len’ set but not used [-Wunused-but-set-variable]
+  517 |         int len;
+      |             ^~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_source.o cmd_source.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_usbd.o cmd_usbd.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_version.o cmd_version.c -c
+cmd_usbd.c:68:19: warning: ‘pszMe’ defined but not used [-Wunused-const-variable=]
+   68 | static const char pszMe[] = "usbd: ";
+      |                   ^~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o cmd_ximg.o cmd_ximg.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o command.o command.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o console.o console.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o decompress_ext4.o decompress_ext4.c -c
+console.c: In function ‘serial_printf’:
+console.c:211:14: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+  211 |         uint i;
+      |              ^
+console.c: In function ‘fprintf’:
+console.c:279:14: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+  279 |         uint i;
+      |              ^
+console.c: In function ‘printf’:
+console.c:373:14: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+  373 |         uint i;
+      |              ^
+console.c: In function ‘vprintf’:
+console.c:390:14: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+  390 |         uint i;
+      |              ^
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o dlmalloc.o dlmalloc.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o env_auto.o env_auto.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o env_common.o env_common.c -c
+env_auto.c: In function ‘saveenv_movinand’:
+env_auto.c:287:9: warning: implicit declaration of function ‘movi_write_env’ [-Wimplicit-function-declaration]
+  287 |         movi_write_env(virt_to_phys((ulong)env_ptr));
+      |         ^~~~~~~~~~~~~~
+In file included from /home/chh/source_code/ensy4412/iTop4412_uboot/include/config.h:5,
+                 from /home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:37,
+                 from env_auto.c:32:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:218:25: warning: implicit declaration of function ‘virt_to_phy_smdkc210’ [-Wimplicit-function-declaration]
+  218 | #define virt_to_phys(x) virt_to_phy_smdkc210(x)
+      |                         ^~~~~~~~~~~~~~~~~~~~
+env_auto.c:287:24: note: in expansion of macro ‘virt_to_phys’
+  287 |         movi_write_env(virt_to_phys((ulong)env_ptr));
+      |                        ^~~~~~~~~~~~
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o exports.o exports.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o flash.o flash.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o image.o image.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o main.o main.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o memsize.o memsize.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o s_record.o s_record.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o stdio.o stdio.c -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o xyzModem.o xyzModem.c -c
+arm-none-linux-gnueabihf-ar crv libcommon.a ace_sha1.o cmd_bdinfo.o cmd_boot.o cmd_bootm.o cmd_console.o cmd_echo.o cmd_elf.o cmd_ext2.o cmd_fastboot.o cmd_fat.o cmd_help.o cmd_itest.o cmd_load.o cmd_max8997.o cmd_mdmupgrade.o cmd_mem.o cmd_misc.o cmd_mmc.o cmd_mmc_fdisk.o cmd_movi.o cmd_nvedit.o cmd_pcmcia.o cmd_source.o cmd_usbd.o cmd_version.o cmd_ximg.o command.o console.o decompress_ext4.o dlmalloc.o env_auto.o env_common.o exports.o flash.o image.o main.o memsize.o s_record.o stdio.o xyzModem.o
+a - ace_sha1.o
+a - cmd_bdinfo.o
+a - cmd_boot.o
+a - cmd_bootm.o
+a - cmd_console.o
+a - cmd_echo.o
+a - cmd_elf.o
+a - cmd_ext2.o
+a - cmd_fastboot.o
+a - cmd_fat.o
+a - cmd_help.o
+a - cmd_itest.o
+a - cmd_load.o
+a - cmd_max8997.o
+a - cmd_mdmupgrade.o
+a - cmd_mem.o
+a - cmd_misc.o
+a - cmd_mmc.o
+a - cmd_mmc_fdisk.o
+a - cmd_movi.o
+a - cmd_nvedit.o
+a - cmd_pcmcia.o
+a - cmd_source.o
+a - cmd_usbd.o
+a - cmd_version.o
+a - cmd_ximg.o
+a - command.o
+a - console.o
+a - decompress_ext4.o
+a - dlmalloc.o
+a - env_auto.o
+a - env_common.o
+a - exports.o
+a - flash.o
+a - image.o
+a - main.o
+a - memsize.o
+a - s_record.o
+a - stdio.o
+a - xyzModem.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/common'
+make -C board/samsung/smdkc210/
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/board/samsung/smdkc210'
+arm-none-linux-gnueabihf-gcc   -D__ASSEMBLY__ -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a   -o lowlevel_init.o lowlevel_init.S -c
+arm-none-linux-gnueabihf-gcc  -g  -Os   -fno-common -ffixed-r8 -msoft-float   -D__KERNEL__ -DTEXT_BASE=0xc3e00000 -I/home/chh/source_code/ensy4412/iTop4412_uboot/include -fno-builtin -ffreestanding -nostdinc -isystem /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1/include -pipe  -DCONFIG_ARM -D__ARM__ -marm  -mabi=aapcs-linux -mno-thumb-interwork -march=armv7-a -Wall -Wstrict-prototypes -fno-stack-protector   -o smdkc210.o smdkc210.c -c
+In file included from lowlevel_init.S:35:
+smdk4x12_val.h:84:122: warning: backslash and newline separated by space
+   84 |                                                                                  |(MUX_HPM_SEL_MOUTAPLL << 20)           \
+      |                                                                                                                           
+In file included from /home/chh/source_code/ensy4412/iTop4412_uboot/include/config.h:5,
+                 from /home/chh/source_code/ensy4412/iTop4412_uboot/include/common.h:37,
+                 from smdkc210.c:28:
+smdkc210.c: In function ‘dram_init’:
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:425:69: warning: integer overflow in expression of type ‘int’ results in ‘-2147483648’ [-Woverflow]
+  425 | #define PHYS_SDRAM_5            (unsigned long)(MEMORY_BASE_ADDRESS + 4 * SDRAM_BANK_SIZE) /* SDRAM Bank #2 */
+      |                                                                     ^
+smdkc210.c:192:44: note: in expansion of macro ‘PHYS_SDRAM_5’
+  192 |                 gd->bd->bi_dram[4].start = PHYS_SDRAM_5;
+      |                                            ^~~~~~~~~~~~
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:427:69: warning: integer overflow in expression of type ‘int’ results in ‘-1879048192’ [-Woverflow]
+  427 | #define PHYS_SDRAM_6            (unsigned long)(MEMORY_BASE_ADDRESS + 5 * SDRAM_BANK_SIZE) /* SDRAM Bank #2 */
+      |                                                                     ^
+smdkc210.c:194:44: note: in expansion of macro ‘PHYS_SDRAM_6’
+  194 |                 gd->bd->bi_dram[5].start = PHYS_SDRAM_6;
+      |                                            ^~~~~~~~~~~~
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:429:69: warning: integer overflow in expression of type ‘int’ results in ‘-1610612736’ [-Woverflow]
+  429 | #define PHYS_SDRAM_7            (unsigned long)(MEMORY_BASE_ADDRESS + 6 * SDRAM_BANK_SIZE) /* SDRAM Bank #2 */
+      |                                                                     ^
+smdkc210.c:196:44: note: in expansion of macro ‘PHYS_SDRAM_7’
+  196 |                 gd->bd->bi_dram[6].start = PHYS_SDRAM_7;
+      |                                            ^~~~~~~~~~~~
+/home/chh/source_code/ensy4412/iTop4412_uboot/include/configs/itop_4412_android.h:431:69: warning: integer overflow in expression of type ‘int’ results in ‘-1342177280’ [-Woverflow]
+  431 | #define PHYS_SDRAM_8            (unsigned long)(MEMORY_BASE_ADDRESS + 7 * SDRAM_BANK_SIZE) /* SDRAM Bank #2 */
+      |                                                                     ^
+smdkc210.c:198:44: note: in expansion of macro ‘PHYS_SDRAM_8’
+  198 |                 gd->bd->bi_dram[7].start = PHYS_SDRAM_8;
+      |                                            ^~~~~~~~~~~~
+smdkc210.c: In function ‘chk_bootdev’:
+smdkc210.c:317:15: warning: implicit declaration of function ‘find_mmc_device’ [-Wimplicit-function-declaration]
+  317 |         mmc = find_mmc_device(0);
+      |               ^~~~~~~~~~~~~~~
+smdkc210.c:317:13: warning: assignment to ‘struct mmc *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+  317 |         mmc = find_mmc_device(0);
+      |             ^
+smdkc210.c:337:39: warning: format ‘%lx’ expects argument of type ‘long unsigned int’, but argument 3 has type ‘int’ [-Wformat=]
+  337 |         sprintf(run_cmd,"mmc read 0 %lx %lx %lx",CFG_PHY_KERNEL_BASE,start_blk,blkcnt);
+      |                                     ~~^
+      |                                       |
+      |                                       long unsigned int
+      |                                     %x
+At top level:
+smdkc210.c:76:13: warning: ‘dm9000_pre_init’ defined but not used [-Wunused-function]
+   76 | static void dm9000_pre_init(void)
+      |             ^~~~~~~~~~~~~~~
+arm-none-linux-gnueabihf-ar crv libsmdkc210.a lowlevel_init.o smdkc210.o
+a - lowlevel_init.o
+a - smdkc210.o
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/board/samsung/smdkc210'
+UNDEF_SYM=`arm-none-linux-gnueabihf-objdump -x board/samsung/smdkc210/libsmdkc210.a lib_generic/libgeneric.a lib_generic/lzma/liblzma.a lib_generic/lzo/liblzo.a cpu/arm_cortexa9/libarm_cortexa9.a cpu/arm_cortexa9/s5pc210/libs5pc210.a lib_arm/libarm.a fs/cramfs/libcramfs.a fs/fat/libfat.a fs/fdos/libfdos.a fs/jffs2/libjffs2.a fs/reiserfs/libreiserfs.a fs/ext2/libext2fs.a fs/yaffs2/libyaffs2.a fs/ubifs/libubifs.a net/libnet.a disk/libdisk.a drivers/bios_emulator/libatibiosemu.a drivers/block/libblock.a drivers/dma/libdma.a drivers/fpga/libfpga.a drivers/gpio/libgpio.a drivers/hwmon/libhwmon.a drivers/i2c/libi2c.a drivers/input/libinput.a drivers/misc/libmisc.a drivers/mmc/libmmc.a drivers/mtd/libmtd.a drivers/mtd/nand/libnand.a drivers/mtd/onenand/libonenand.a drivers/mtd/ubi/libubi.a drivers/mtd/spi/libspi_flash.a drivers/net/libnet.a drivers/net/phy/libphy.a drivers/pci/libpci.a drivers/pcmcia/libpcmcia.a drivers/power/libpower.a drivers/spi/libspi.a drivers/rtc/librtc.a drivers/serial/libserial.a drivers/twserial/libtws.a drivers/usb/gadget/libusb_gadget.a drivers/usb/host/libusb_host.a drivers/usb/musb/libusb_musb.a drivers/usb/phy/libusb_phy.a drivers/video/libvideo.a drivers/watchdog/libwatchdog.a common/libcommon.a libfdt/libfdt.a api/libapi.a post/libpost.a | sed  -n -e 's/.*\(__u_boot_cmd_.*\)/-u\1/p'|sort|uniq`; cd /home/chh/source_code/ensy4412/iTop4412_uboot && arm-none-linux-gnueabihf-ld -Bstatic -T u-boot.lds  -Ttext 0xc3e00000 $UNDEF_SYM cpu/arm_cortexa9/start.o --start-group lib_generic/libgeneric.a lib_generic/lzma/liblzma.a lib_generic/lzo/liblzo.a cpu/arm_cortexa9/libarm_cortexa9.a cpu/arm_cortexa9/s5pc210/libs5pc210.a lib_arm/libarm.a fs/cramfs/libcramfs.a fs/fat/libfat.a fs/fdos/libfdos.a fs/jffs2/libjffs2.a fs/reiserfs/libreiserfs.a fs/ext2/libext2fs.a fs/yaffs2/libyaffs2.a fs/ubifs/libubifs.a net/libnet.a disk/libdisk.a drivers/bios_emulator/libatibiosemu.a drivers/block/libblock.a drivers/dma/libdma.a drivers/fpga/libfpga.a drivers/gpio/libgpio.a drivers/hwmon/libhwmon.a drivers/i2c/libi2c.a drivers/input/libinput.a drivers/misc/libmisc.a drivers/mmc/libmmc.a drivers/mtd/libmtd.a drivers/mtd/nand/libnand.a drivers/mtd/onenand/libonenand.a drivers/mtd/ubi/libubi.a drivers/mtd/spi/libspi_flash.a drivers/net/libnet.a drivers/net/phy/libphy.a drivers/pci/libpci.a drivers/pcmcia/libpcmcia.a drivers/power/libpower.a drivers/spi/libspi.a drivers/rtc/librtc.a drivers/serial/libserial.a drivers/twserial/libtws.a drivers/usb/gadget/libusb_gadget.a drivers/usb/host/libusb_host.a drivers/usb/musb/libusb_musb.a drivers/usb/phy/libusb_phy.a drivers/video/libvideo.a drivers/watchdog/libwatchdog.a common/libcommon.a libfdt/libfdt.a api/libapi.a post/libpost.a board/samsung/smdkc210/libsmdkc210.a --end-group /home/chh/source_code/ensy4412/iTop4412_uboot/lib_arm/eabi_compat.o -L /home/chh/toolchains/arm-gnu-toolchain-11.3.rel1-x86_64-arm-none-linux-gnueabihf/bin/../lib/gcc/arm-none-linux-gnueabihf/11.3.1 -lgcc -Map u-boot.map -o u-boot
+arm-none-linux-gnueabihf-objcopy -O srec u-boot u-boot.srec
+arm-none-linux-gnueabihf-objcopy --gap-fill=0xff -O binary u-boot u-boot.bin
+make[1]: Entering directory '/home/chh/source_code/ensy4412/iTop4412_uboot/sdfuse_q'
+gcc -o	chksum  chksum.c
+gcc -o	add_sign  add_sign.c
+gcc -o	add_padding  add_padding.c
+make[1]: Leaving directory '/home/chh/source_code/ensy4412/iTop4412_uboot/sdfuse_q'
+bl2aa file size= 14336B
+before padding uboot.bin file size= 233692B
+102180 B written 
+

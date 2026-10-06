@@ -1,0 +1,1 @@
+/home/chh/source_code/ensy4412/iTop4412_uboot/board/samsung/smdkc210/lowlevel_init_POP.S
